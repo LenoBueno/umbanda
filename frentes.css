@@ -1,0 +1,57 @@
+.frentes-container {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tab-button.active {
+    color: #000;
+}
+
+.tab-button.inactive {
+    color: #666;
+}
+
+.tab-content {
+    color: #000;
+}
+
+.info-text {
+    color: #000;
+    margin: 0;
+}
+
+/* Estilizando a palavra "aqui" em laranja */
+.info-text::after {
+    content: "aqui";
+    color: orange;
+    margin-left: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    font-size: 14px;
+}
+
+/* Ajustes para o main para evitar sobreposição com o footer */
+main {
+    margin-bottom: 60px;
+} 

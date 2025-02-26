@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Frentes - Ylê Axé Xangô & Oxum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Ylê Axé Xangô & Oxum</h1>
+            <a href="#" class="logout-btn" onclick="logout()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3h10v2H5v14h8v2H3V3zm14 4l4 4-4 4v-3H9v-2h8V7z" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="admin-sobre.html">Sobre</a></li>
+                <li><a href="admin-frentes.html">Frentes</a></li>
+                <li><a href="admin-ervas.html">Ervas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="admin-container">
+            <div class="tabs">
+                <div class="tab-button active" onclick="switchTab(this)">Frentes Umbanda</div>
+                <div class="tab-button inactive" onclick="switchTab(this)">Frentes Nação</div>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Formulário Umbanda -->
+                <form class="admin-form" id="umbandaForm" onsubmit="handleFrenteSubmit(event, 'umbanda')">
+                    <div class="form-group">
+                        <label for="imagem">Imagem</label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitulo">Subtítulo</label>
+                        <input type="text" id="subtitulo" name="subtitulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao" maxlength="1000" rows="10" required></textarea>
+                        <div class="char-counter">0/1000</div>
+                    </div>
+                    <button type="submit" class="save-btn">Salvar</button>
+                </form>
+
+                <!-- Formulário Nação -->
+                <form class="admin-form hidden" id="nacaoForm" onsubmit="handleFrenteSubmit(event, 'nacao')">
+                    <div class="form-group">
+                        <label for="imagem-nacao">Imagem</label>
+                        <input type="file" id="imagem-nacao" name="imagem" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo-nacao">Título</label>
+                        <input type="text" id="titulo-nacao" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitulo-nacao">Subtítulo</label>
+                        <input type="text" id="subtitulo-nacao" name="subtitulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao-nacao">Descrição</label>
+                        <textarea id="descricao-nacao" name="descricao" maxlength="1000" rows="10" required></textarea>
+                        <div class="char-counter">0/1000</div>
+                    </div>
+                    <button type="submit" class="save-btn">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Ylê Axé Xangô & Oxum - Desde ----</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html> 

@@ -1,0 +1,36 @@
+.sobre-container {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.sobre-container h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+.sobre-container p {
+    margin: 0;
+    color: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+/* Ajustes para o main para evitar sobreposição com o footer */
+main {
+    margin-bottom: 60px;
+} 
